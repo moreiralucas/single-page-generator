@@ -12,6 +12,7 @@ Then, create and activate a venv:
 python3 -m venv env
 source env/bin/activate
 ```
+In this project, the python version is 3.6.9
 
 Install the requirements:
 ```
