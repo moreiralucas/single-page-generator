@@ -3,14 +3,24 @@
   "title_body": "List of products",
   "path_logo_title": "assets/img/titulo.png",
   "items": [{
-    "description": "Item 1",
-    "description_foot": "One",
-    "total_price": "R$ 10,00",
-    "path_image": "",
-    "link_pagseguro": "#",
-    "btn_size": "95x45",
-    "btn_color": "roxo"
-  }],
+      "description": "Item 1",
+      "description_foot": "One",
+      "total_price": "R$ 10,00",
+      "path_image": "",
+      "link_pagseguro": "#",
+      "btn_size": "95x45",
+      "btn_color": "roxo"
+    },
+    {
+      "description": "Item 2",
+      "description_foot": "Two",
+      "total_price": "R$ 12,00",
+      "path_image": "",
+      "link_pagseguro": "#",
+      "btn_size": "95x45",
+      "btn_color": "roxo"
+    }
+  ],
   "footer_phrase": "",
   "footer": ""
 }
