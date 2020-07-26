@@ -1,16 +1,16 @@
 {
-  "title-page": "",
-  "title-body": "",
-  "path-logo-title": "assets/img/titulo.png",
+  "title_page": "",
+  "title_body": "",
+  "path_logo_title": "assets/img/titulo.png",
   "items": [{
     "description": "",
-    "description-foot": "",
-    "total-price": "",
-    "path-image": "",
-    "link-pagseguro": "#",
-    "btn-size": "95x45",
-    "btn-color": "roxo"
+    "description_foot": "",
+    "total_price": "",
+    "path_image": "",
+    "link_pagseguro": "#",
+    "btn_size": "95x45",
+    "btn_color": "roxo"
   }],
-  "footer-phrase": "",
+  "footer_phrase": "",
   "footer": ""
 }
