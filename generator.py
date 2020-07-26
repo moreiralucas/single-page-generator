@@ -13,6 +13,8 @@ OPTIONAL_PARAMS = [
   "path_logo_title",
 ]
 
+TEMPLATE_DEFAULT = 'templates/index.html'
+
 def check_item(items):
   for data in items:
     for key, value in data.items():
@@ -39,20 +41,16 @@ def get_json():
     return json.loads(input_file)
 
 def get_template():
-  with open("templates/index.html", "r") as f:
+  with open(TEMPLATE_DEFAULT, "r") as f:
     template_file = f.read()
     template = Template(template_file)
     return template
 
 def make_dirs(project_name):
   os.mkdir("output/{}".format(project_name))
-  os.mkdir("output/{}/static/".format(project_name))
-  os.mkdir("output/{}/static/js".format(project_name))
-  os.mkdir("output/{}/static/css".format(project_name))
-  os.mkdir("output/{}/static/img".format(project_name))
 
 def copy_files(project_name):
-  dst = os.path.join("output", project_name)
+  dst = os.path.join("output", project_name, "static")
   copytree("static", dst)
 
 def write_html(html, project_name=None):
