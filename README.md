@@ -1,5 +1,10 @@
 # A simple static page generator for one specific purpose
 
+The purpose of this project was to create a static html page generator for support a virtual [Baby Shower](https://en.wikipedia.org/wiki/Baby_shower) party.
+
+Despite this event being held in person, due to the context in which we are quarantined due to the pandemic caused by the coronavirus (COVID-19), there was a need to perform it in a virtual way to maintain the tradition.
+
+
 ## Requirements
 
 We recomend installing Python's venv:
@@ -21,16 +26,20 @@ pip install -r requirements.txt
 
 ## How to use
 
-Após a instalação, altere o arquivo ```input.json```, inserindo os dados a serem exibidos na página html.
+After installation, change the ```input.json``` file, inserting the data to be displayed on the html page.
 
 ## Summary
 
+
+**Tags of page**
 -  title_body: A title of your content. this will be displayed below the header image   
 -  title_page: A title of your page html  
 -  path_logo_title: The path to header image  
 -  items: The list of items to display (this will be described below)   
 -  footer_phrase: A phrase to be displayed below the listed items.   
 -  footer: Your page footer message   
+
+
 **The list of items**
 -  description: The item description
 -  description_foot: The complement of description
