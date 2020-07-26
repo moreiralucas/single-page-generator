@@ -1,4 +1,6 @@
-# A simple static page generator for one specific purpose
+# A simple static page generator for one specific purpose   
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=4PKKLTZXPF9LS&currency_code=BRL&source=url)
+
 
 The purpose of this project was to create a static html page generator for support a virtual [Baby Shower](https://en.wikipedia.org/wiki/Baby_shower) party.
 
@@ -45,10 +47,14 @@ After installation, change the ```input.json``` file, inserting the data to be d
 -  description_foot: The complement of description
 -  total_price: The price of item
 -  path_image: The path of image of the item
--  link_pagseguro: Link to the payment service (PagSeguro)
+-  link_pagseguro: Link to the payment service ([PagSeguro](https://pagseguro.uol.com.br/))
 -  btn_size: The size of button of payment service
 -  btn_color: The color of button of payment service
 
+## Donation
+If this project help you reduce time to develop, you can give me a cup of coffee :) 
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=4PKKLTZXPF9LS&currency_code=BRL&source=url)
 
 
 ## License
