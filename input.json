@@ -1,11 +1,11 @@
 {
-  "title_page": "",
-  "title_body": "",
+  "title_page": "Single page",
+  "title_body": "List of products",
   "path_logo_title": "assets/img/titulo.png",
   "items": [{
-    "description": "",
-    "description_foot": "",
-    "total_price": "",
+    "description": "Item 1",
+    "description_foot": "One",
+    "total_price": "R$ 10,00",
     "path_image": "",
     "link_pagseguro": "#",
     "btn_size": "95x45",
