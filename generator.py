@@ -56,6 +56,8 @@ def copy_files(project_name):
 def write_html(html, project_name=None):
   if project_name is None:
     project_name = ''.join([choice(string.ascii_letters) for _ in range(5)])
+  else:
+    project_name = ''.join(x if x.isalpha() else '_' for x in project_name)
   project_name += '_' + datetime.now().strftime("%d-%m-%Y")
 
   make_dirs(project_name)
@@ -68,6 +70,6 @@ def write_html(html, project_name=None):
 template = get_template()
 dados = get_json()
 check_data(dados)
-write_html(template.render(dados))
+write_html(template.render(dados), dados['title_page'])
 
 
