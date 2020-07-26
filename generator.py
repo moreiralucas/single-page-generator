@@ -1,5 +1,8 @@
-import os, json
+import os, json, string
 from jinja2 import Template
+from random import choice
+from datetime import datetime
+from shutil import copyfile, copytree
 
 OPTIONAL_PARAMS = [
   "btn_size",
@@ -41,8 +44,32 @@ def get_template():
     template = Template(template_file)
     return template
 
+def make_dirs(project_name):
+  os.mkdir("output/{}".format(project_name))
+  os.mkdir("output/{}/static/".format(project_name))
+  os.mkdir("output/{}/static/js".format(project_name))
+  os.mkdir("output/{}/static/css".format(project_name))
+  os.mkdir("output/{}/static/img".format(project_name))
+
+def copy_files(project_name):
+  dst = os.path.join("output", project_name)
+  copytree("static", dst)
+
+def write_html(html, project_name=None):
+  if project_name is None:
+    project_name = ''.join([choice(string.ascii_letters) for _ in range(5)])
+  project_name += '_' + datetime.now().strftime("%d-%m-%Y")
+
+  make_dirs(project_name)
+  copy_files(project_name)
+
+  file_path = os.path.join('output', project_name, 'index.html')
+  with open(file_path, "w") as f:
+    f.write(html)
+
 template = get_template()
 dados = get_json()
 check_data(dados)
-print(template.render(dados))
+write_html(template.render(dados))
+
 
