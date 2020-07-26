@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title_page }}</title>
+
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/styles/style.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="">
+        {% if path_logo_title %}
+          <img src="{{ path_logo_title }}" alt="Título" class="logo-title">
+        {% else %}
+          <img src="assets/img/titulo.png" alt="Título" class="logo-title">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="shopping-cart">
+    <!-- Title -->
+    <div class="title">
+      {{ title_body }}
+    </div>
+    {% for item in items %}
+      <!-- Product #1 -->
+      <div class="item">
+
+        <div class="image">
+          {% if item.path_image %}
+            <img src="{{ item.path_image }}" alt="" />
+          {% else %}
+            <img src="assets/img/fralda.png" alt="" />
+          {% endif %}
+        </div>
+
+        <div class="description">
+          <span>
+            {{ item.description }}
+          </span>
+          <span>{{ item.description-foot }} </span>
+        </div>
+
+        <div class="total-price">{{ item.total_price }}</div>
+
+        <div class="quantity center">
+          <!-- BEGIN PAGSEGURO BUTTON -->
+          <a href="{{ item.link_pagseguro }}" target="_blank" title="Pagar com PagSeguro"><img
+              src="//assets.pagseguro.com.br/ps-integration-assets/botoes/pagamentos/{{ item.btn_size }}-pagar-{{ item.btn_color }}.gif"
+              alt="Pague com PagSeguro - é rápido, grátis e seguro!" /></a>
+          <!-- END PAGSEGURO BOTTON -->
+        </div>
+      </div>
+    {% endfor %}
+
+    <div class="frase-rodape">
+      {% if footer_phrase %}
+        <br>
+        {{ footer_phrase }}
+      {% endif %}
+    </div>
+  </div>
+
+</body>
+<footer>
+  <div class="footer">
+    {% if footer %}
+      {{ footer }}
+    {% else %}
+      Feito com por <a href="http://moreiralucas.github.io">Lucas Moreira</a> e
+      <a href="http://beatriznutricao.com.br/">Bia Barreto</a>
+    {% endif %}
+  </div>
+</footer>
+
+</html>

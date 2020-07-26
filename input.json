@@ -1,14 +1,16 @@
 {
-  "title": "",
-  "logo-title": "",
-  "footer-phrase": "",
-  "footer": "",
+  "title-page": "",
+  "title-body": "",
+  "path-logo-title": "assets/img/titulo.png",
   "items": [{
     "description": "",
     "description-foot": "",
     "total-price": "",
-    "link": "",
-    "btn-size": "",
-    "btn-color": ""
-  }]
+    "path-image": "",
+    "link-pagseguro": "#",
+    "btn-size": "95x45",
+    "btn-color": "roxo"
+  }],
+  "footer-phrase": "",
+  "footer": ""
 }
