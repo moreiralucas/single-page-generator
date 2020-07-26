@@ -1,11 +1,19 @@
 import os, json
 from jinja2 import Template
 
+OPTIONAL_PARAMS = [
+  "btn_size",
+  "btn_color",
+  "path_image",
+  "footer_phrase",
+  "footer",
+  "path_logo_title",
+]
+
 def check_item(items):
   for data in items:
     for key, value in data.items():
-      # Optional params
-      if key == "btn_size" or key == "btn_color" or key == "path_image":
+      if key in OPTIONAL_PARAMS:
         continue
 
       if value == "":
@@ -13,8 +21,7 @@ def check_item(items):
 
 def check_data(data):
   for key, value in data.items():
-    # Optional params
-    if key == "footer_phrase" or key == "footer" or key == "path_logo_title":
+    if key in OPTIONAL_PARAMS:
       continue
 
     if value == "":
